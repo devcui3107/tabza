@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="description"
+      content="Thư viện Tabs tối ưu dành cho nhà phát triển. Sạch sẽ, hiện đại và rất
+    nhẹ."
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Tabza -->
+    <link rel="stylesheet" href="./src/tabza.css" />
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!-- CSS Main -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Thêm theme Okaidia cho PrismJS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.css"
+      rel="stylesheet"
+    />
+    <title>Tabza</title>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Tabza.js</h1>
+      <p>
+        Thư viện Tabs tối ưu dành cho nhà phát triển. Sạch sẽ, hiện đại và rất
+        nhẹ.
+      </p>
+      <a href="#setting" class="cta-button">Cài đặt</a>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="wrap-content">
+      <!-- Introduction -->
+      <div class="content-card">
+        <h2 data-title="#1">Giới thiệu</h2>
+        <p>
+          <strong>Tabza.js</strong> là một thư viện JavaScript thuần (Vanilla
+          JS) mạnh mẽ, được thiết kế đặc biệt để quản lý các tab trong giao diện
+          người dùng một cách dễ dàng và linh hoạt. Tabza.js cung cấp một cách
+          đơn giản để tổ chức và điều khiển các tab trong bất kỳ ứng dụng web
+          nào.
+        </p>
+        <h3>Đặc điểm nổi bật</h3>
+        <ul class="list-content">
+          <li>
+            Nhẹ và nhanh: Tabza.js ~ 1.7KB , không yêu cầu thư viện phụ thuộc
+            nào.
+          </li>
+          <li>
+            Tích hợp linh hoạt: Hoạt động tốt với mọi dự án và framework mà
+            không cần cấu hình phức tạp.
+          </li>
+          <li>
+            Tùy biến cao: Bạn có thể dễ dàng điều chỉnh hành vi và hiệu ứng của
+            các tab thông qua các tùy chọn cấu hình.
+          </li>
+          <li>
+            CSS dễ dàng tùy chỉnh: Tạo giao diện theo ý muốn mà không cần phải
+            can thiệp vào mã nguồn chính của thư viện.
+          </li>
+          <li>
+            Thân thiện với lập trình viên: cung cấp callback rõ ràng, giúp lập
+            trình viên dễ dàng kiểm soát và mở rộng chức năng của tab theo yêu
+            cầu của dự án.
+          </li>
+        </ul>
+
+        <!-- Demos -->
+        <h3 data-title="#3">Demo tổng quan</h3>
+
+        <!-- Tab Demo 1 -->
+        <div id="tabs-demo-1">
+          <div class="tab-list">
+            <button class="tab-item" data-tab="tab-1">Tab 1</button>
+            <button class="tab-item" data-tab="tab-2">Tab 2</button>
+            <button class="tab-item" data-tab="tab-3">Tab 3</button>
+          </div>
+          <div class="tab-panels">
+            <div id="tab-1" class="tab-panel">
+              <h4>Nội dung Tab 1</h4>
+              <p>Đây là nội dung của tab thứ nhất.</p>
+            </div>
+            <div id="tab-2" class="tab-panel">
+              <h4>Nội dung Tab 2</h4>
+              <p>Đây là nội dung của tab thứ hai.</p>
+            </div>
+            <div id="tab-3" class="tab-panel">
+              <h4>Nội dung Tab 3</h4>
+              <p>Đây là nội dung của tab thứ ba.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Demo Detail -->
+      <div class="content-card">
+        <h2 data-title="#2">Demo chi tiết</h2>
+
+        <!-- Tabs Demo 2 -->
+        <p>Tab ngang có dùng hiệu ứng keyframes</p>
+        <div class="backdrop">
+          <div id="tabs-demo-2">
+            <div class="tab-list">
+              <button class="tab-item" data-tab="tab-1">Tab A</button>
+              <button class="tab-item" data-tab="tab-2">Tab B</button>
+              <button class="tab-item" data-tab="tab-3">Tab C</button>
+            </div>
+            <div class="tab-panels">
+              <div id="tab-1" class="tab-panel">
+                <h4>Nội dung Tab A</h4>
+                <p>Đây là nội dung của tab A.</p>
+              </div>
+              <div id="tab-2" class="tab-panel">
+                <h4>Nội dung Tab B</h4>
+                <p>Đây là nội dung của tab B.</p>
+              </div>
+              <div id="tab-3" class="tab-panel">
+                <h4>Nội dung Tab C</h4>
+                <p>Đây là nội dung của tab C.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs Demo 3 -->
+        <p>Tab dọc có dùng hiệu ứng keyframes</p>
+        <div id="tabs-demo-3">
+          <div class="tab-list">
+            <button class="tab-item" data-tab="tab-1">Tab X</button>
+            <button class="tab-item" data-tab="tab-2">Tab Y</button>
+            <button class="tab-item" data-tab="tab-3">Tab Z</button>
+          </div>
+          <div class="tab-panels">
+            <div id="tab-1" class="tab-panel">
+              <h4>Nội dung Tab X</h4>
+              <p>Đây là nội dung của tab X.</p>
+            </div>
+            <div id="tab-2" class="tab-panel">
+              <h4>Nội dung Tab Y</h4>
+              <p>Đây là nội dung của tab Y.</p>
+            </div>
+            <div id="tab-3" class="tab-panel">
+              <h4>Nội dung Tab Z</h4>
+              <p>Đây là nội dung của tab Z.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs Demo 4 -->
+        <p>
+          Hoặc bất ký giao diện nào tuỳ thuộc vào dự án. Vì thư viện chỉ hỗ trợ
+          chức năng, còn phần CSS hoàn toàn tùy chỉnh theo ý bạn.
+        </p>
+
+        <div id="tabs-demo-4">
+          <div class="tab-list">
+            <button class="tab-item" data-tab="tab-1">Tab X</button>
+            <button class="tab-item" data-tab="tab-2">Tab Y</button>
+            <button class="tab-item" data-tab="tab-3">Tab Z</button>
+          </div>
+          <div class="tab-panels">
+            <div id="tab-1" class="tab-panel">
+              <h4>Nội dung Tab X</h4>
+              <p>Đây là nội dung của tab X.</p>
+            </div>
+            <div id="tab-2" class="tab-panel">
+              <h4>Nội dung Tab Y</h4>
+              <p>Đây là nội dung của tab Y.</p>
+            </div>
+            <div id="tab-3" class="tab-panel">
+              <h4>Nội dung Tab Z</h4>
+              <p>Đây là nội dung của tab Z.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Setting -->
+      <div class="content-card" id="setting">
+        <h2 data-title="#3">Cài đặt</h2>
+        <p>Thêm đoạn code sau vào trước thẻ đóng <code>body</code></p>
+
+        <!-- Highlight Code -->
+        <!-- JS -->
+        <div class="content-code">
+          <div class="content-code__row">
+            <span class="content-code__title">html</span>
+            <button class="content-code__btn">
+              <img
+                src="./assets/icon/copy.svg"
+                alt=""
+                class="content-code__btn-icon"
+              />
+              Sao chép
+            </button>
+          </div>
+          <!-- Mẫu code cần highlight -->
+          <pre><code class="language-html">
+&lt;script src="https://cdn.jsdelivr.net/gh/devcui3107/Tabza@v1.0.1/Tabza.min.js"&gt;&lt;/script&gt;
+          </code></pre>
+        </div>
+      </div>
+
+      <!-- Callback -->
+      <div class="content-card" id="callback">
+        <h2 data-title="#4">Callback</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tham Số</th>
+              <th>Mô Tả</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>prevIndex</code></td>
+              <td>
+                Vị trí (chỉ số) của tab trước đó. Nếu là lần đầu tiên mở tab
+                (không có tab trước), giá trị sẽ là <code>null</code>.
+              </td>
+            </tr>
+            <tr>
+              <td><code>nextIndex</code></td>
+              <td>Vị trí (chỉ số) của tab hiện tại mà người dùng đã chọn.</td>
+            </tr>
+            <tr>
+              <td><code>prevTab</code></td>
+              <td>
+                Phần tử HTML của tab-item trước đó. Nếu là lần đầu tiên mở tab
+                (không có tab trước), giá trị sẽ là <code>null</code>.
+              </td>
+            </tr>
+            <tr>
+              <td><code>nextTab</code></td>
+              <td>Phần tử HTML của tab-item hiện tại mà người dùng đã chọn.</td>
+            </tr>
+            <tr>
+              <td><code>prevPanel</code></td>
+              <td>
+                Phần tử HTML của tab-panel trước đó. Nếu là lần đầu tiên mở tab
+                (không có panel trước), giá trị sẽ là <code>null</code>.
+              </td>
+            </tr>
+            <tr>
+              <td><code>nextPanel</code></td>
+              <td>
+                Phần tử HTML của tab-panel hiện tại tương ứng với tab người dùng
+                đã chọn.
+              </td>
+            </tr>
+            <tr>
+              <td><code>tabContainer</code></td>
+              <td>
+                Phần tử HTML của toàn bộ container chứa danh sách tab-item và
+                tab-panel.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Effect -->
+      <div class="content-card" id="effect">
+        <h2 data-title="#5">Hiệu ứng</h2>
+        <!-- Highlight Code -->
+        <p>
+          Để áp dụng hiệu ứng chuyển tiếp cho nội dung của các tab, bạn cần tạo
+          các keyframes như ví dụ bên dưới và thêm chúng vào các lớp CSS của
+          phần tử chứa nội dung tab.
+        </p>
+        <!-- JS -->
+        <div class="content-code">
+          <div class="content-code__row">
+            <span class="content-code__title">css</span>
+            <button class="content-code__btn">
+              <img
+                src="./assets/icon/copy.svg"
+                alt=""
+                class="content-code__btn-icon"
+              />
+              Sao chép
+            </button>
+          </div>
+          <!-- Mẫu code cần highlight -->
+          <pre><code class="language-css">.tab-panel { /* class có thể là tên khác trong dự án của bạn*/
+  animation: fadeIn 0.3s ease-in-out;
+}
+/* Animation cho nội dung */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Thêm các Animation khác tại đây ...*/</code></pre>
+        </div>
+      </div>
+
+      <!-- Usage -->
+      <div class="content-card" id="usage">
+        <h2 data-title="#6">HD sử dụng</h2>
+        <!-- Highlight Code -->
+        <!-- JS -->
+        <div class="content-code">
+          <div class="content-code__row">
+            <span class="content-code__title">javascript</span>
+            <button class="content-code__btn">
+              <img
+                src="./assets/icon/copy.svg"
+                alt=""
+                class="content-code__btn-icon"
+              />
+              Sao chép
+            </button>
+          </div>
+          <!-- Mẫu code cần highlight -->
+          <pre><code class="language-javascript">new Tabza("#tabs-container", {
+  activeTab: 2, // Tab mặc định được chọn là tab thứ hai (bắt đầu từ 0)
+  activeClass: "custom-active", // Đặt class để css các nút tab-item khi được active
+  useLS: false, // Mặc định true: cho phép lưu tab-active ở Local Storage
+  useHash: true,
+  action:()=>{} // Có 7 tham số xem HD ở #4. Callback
+  // VD: Cách lấy 1 đối số nhanh
+  // action: (...args) => {
+   // const container = args[5];
+    // console.log(container);
+  // },
+  // Bỏ qua đối số không dùng bằng cách truyền dấu _
+});
+</code></pre>
+        </div>
+
+        <!-- Chú ý -->
+        <p><mark>Chú ý:</mark> Hướng dẫn CSS đúng cách.</p>
+        <p>Dưới đây là hướng dẫn về cách tùy chỉnh CSS cho các phần tử tab:</p>
+        <blockquote>
+          <p>
+            <strong>CSS cho nội dung tab:</strong> Bạn có thể tùy chỉnh CSS cho
+            các phần tử chứa nội dung tab như bình thường. VD bên dưới là
+            <code>tab-panels</code> và <code>tab-panel</code>
+          </p>
+          <p>
+            <strong>CSS cho <code>tab-item</code> ở trạng thái active:</strong>
+            Để thay đổi lớp CSS cho <code>tab-item</code> khi nó ở trạng thái
+            active, bạn cần khai báo class này trong quá trình khởi tạo tab
+            thông qua tùy chọn <code>activeClass</code>, ví dụ:
+            <code>activeClass: "custom-active"</code>. Bạn có thể thay đổi tên
+            lớp này theo ý muốn.
+          </p>
+        </blockquote>
+
+        <p>
+          Class <code>custom-active</code> được khởi tạo từ
+          <code>activeClass</code> sẽ xuất hiện như ví dụ bên dưới. Nó biểu thị
+          cho trạng thái khi tab được chọn
+        </p>
+
+        <!-- Highlight Code -->
+        <!-- JS -->
+        <div class="content-code">
+          <div class="content-code__row">
+            <span class="content-code__title">html</span>
+            <button class="content-code__btn">
+              <img
+                src="./assets/icon/copy.svg"
+                alt=""
+                class="content-code__btn-icon"
+              />
+              Sao chép
+            </button>
+          </div>
+          <!-- Mẫu code cần highlight -->
+          <pre><code class="language-html">&lt;div id=&quot;tabs-demo-1&quot;&gt;
+&lt;div class=&quot;tab-list&quot;&gt;
+  &lt;button class=&quot;tab-item custom-active&quot; data-tab=&quot;tab-1&quot;&gt;Tab 1&lt;/button&gt;
+  &lt;button class=&quot;tab-item&quot; data-tab=&quot;tab-2&quot;&gt;Tab 2&lt;/button&gt;
+  &lt;button class=&quot;tab-item&quot; data-tab=&quot;tab-3&quot;&gt;Tab 3&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;tab-panels&quot;&gt;
+  &lt;div id=&quot;tab-1&quot; class=&quot;tab-panel&quot;&gt;
+    &lt;h4&gt;Nội dung Tab 1&lt;/h4&gt;
+    &lt;p&gt;Đây là nội dung của tab thứ nhất.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;tab-2&quot; class=&quot;tab-panel&quot;&gt;
+    &lt;h4&gt;Nội dung Tab 2&lt;/h4&gt;
+    &lt;p&gt;Đây là nội dung của tab thứ hai.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;tab-3&quot; class=&quot;tab-panel&quot;&gt;
+    &lt;h4&gt;Nội dung Tab 3&lt;/h4&gt;
+    &lt;p&gt;Đây là nội dung của tab thứ ba.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlight Code -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+
+    <!-- Plugin Autoloader -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <!-- Tự động tải ngôn ngữ cần thiết -->
+    <script>
+      Prism.plugins.autoloader.languages_path =
+        "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/";
+    </script>
+
+    <!-- Tabza.js -->
+    <script src="./src/tabza.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
