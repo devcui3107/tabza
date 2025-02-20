@@ -1,0 +1,87 @@
+pre[class*="language-"] {
+  background: #272935 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+/* Button Custom */
+.btn-demo {
+  text-align: center;
+  width: max-content;
+  background: linear-gradient(135deg, #3e4e5e, #1f2028);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 5px;
+  text-transform: capitalize;
+  padding: 10px 16px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-demo:hover {
+  background: linear-gradient(135deg, #1f2028, #3e4e5e);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: #272935;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  table-layout: auto; /* Cho phép các cột tự động điều chỉnh chiều rộng */
+  overflow: hidden;
+}
+
+/* Header */
+thead {
+  background: linear-gradient(174deg, #51546e, #1f2028);
+  text-align: left;
+}
+
+th {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap; /* Ngăn dòng tiêu đề bị chia nhỏ */
+}
+
+/* Cột đầu tiên */
+td:first-child,
+th:first-child {
+  width: 2%; /* Đảm bảo cột đầu tiên chỉ rộng đủ cho nội dung */
+  white-space: nowrap; /* Đảm bảo không bị cắt nội dung */
+}
+
+/* Rows */
+tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #3b3e51;
+}
+
+td {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Viền bảng */
+table,
+th,
+td {
+  /* border: 1px solid #ddd; */
+  color: #bfc3d9;
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+
+/* Thêm viền cho header */
+th {
+  border-bottom: 2px solid #5b86e5;
+}

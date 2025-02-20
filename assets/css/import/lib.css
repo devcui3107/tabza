@@ -1,0 +1,29 @@
+/* Highlight Code */
+pre[class*="language-"] {
+  background: #151515;
+  border-radius: 0 0 5px 5px;
+  border-top: 1px solid #464646;
+}
+
+code,
+pre,
+samp {
+  white-space: pre-wrap;
+  font-family: consolas, "DejaVu Sans Mono", courier, monospace;
+  font-size: 1.5rem;
+}
+
+code:not([class*="language-"]) {
+  background-color: #435467;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  display: inline-block;
+  letter-spacing: 0.05em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+code[class*="language-"] {
+  font-size: 1.4rem !important;
+}
